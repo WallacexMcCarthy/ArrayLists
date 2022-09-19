@@ -50,9 +50,12 @@ public class Controller
 		System.out.println(ageList);
 		for (int index = 0; index < nameList.size(); index++)
 		{
-			System.out.print("Name: " + nameList.get(index) + " | Age: " + ageList.get(index));
+			System.out.println("Name: " + nameList.get(index) + " | Age: " + ageList.get(index));
 			
 		}
+		nameList.remove(nameList.size()-1);
+		
+		System.out.println(nameList);
 		
 	}
 
