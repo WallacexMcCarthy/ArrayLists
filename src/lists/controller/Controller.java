@@ -21,9 +21,53 @@ public class Controller
 	
 	public void start()
 	{
-		listDemo();
-		
+		manyMonsters();
+//		moreListStuff();
+//		listDemo();
+//		
 		keyboardInput.close();
+	}
+	
+	private void manyMonsters()
+	{
+		
+	}
+	
+	private void moreListStuff()
+	{
+		double val = -0.7;
+
+		int roundedVal = (int) (val + 0.5);
+
+		System.out.println(roundedVal);
+		keyboardInput.nextLine();
+		
+		ArrayList<String> messages = new ArrayList<String>();		
+		for (int index = 0; index<100; index++)
+		{
+			String message = "This is a messge and it is at index: " + index;
+			messages.add(message);
+		}
+		
+		
+		if (!messages.isEmpty())
+		{
+			System.out.println("Stuff is in the list");
+			messages.remove(50);
+		}
+		
+//		while (!messages.isEmpty())
+//		{
+//			int halfway = messages.size() / 2;
+//			String removed = messages.remove(halfway);
+//			System.out.println(removed);
+//		}
+		
+		messages.clear();
+		System.out.println(messages);
+//		System.out.println(messages.get(15));
+		
+		
 	}
 	
 	private void listDemo()
@@ -56,6 +100,12 @@ public class Controller
 		nameList.remove(nameList.size()-1);
 		
 		System.out.println(nameList);
+		
+		String myRandomItem = "";
+		int randomIndex = (int) (Math.random() * nameList.size());
+		myRandomItem = nameList.get(randomIndex);
+		System.out.println("The random index was: " + randomIndex);
+		System.out.println("The random name is: " + myRandomItem);
 		
 	}
 
