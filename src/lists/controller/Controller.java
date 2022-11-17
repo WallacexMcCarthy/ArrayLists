@@ -78,24 +78,11 @@ public class Controller
 		testerList.add("vbfg");
 		testerList.add("k[adsf");
 		testerList.add("[p-");
-		testerList.add("234");
-		testerList.add("[");
-		testerList.add("]0---");
-		testerList.add("=-0");
-		testerList.add("['/;");
-		testerList.add("srtyh");
-		testerList.add("RTHDFGHFGH");
-		testerList.add("RTI['");
-		testerList.add("PL;'[PO'P");
-		testerList.add("][P;LOIK");
-		testerList.add("UI;O'O;L/K.");
-		testerList.add("KJL;JO;'L;L;'");
-		testerList.add(";[[';;");
 		testerList.add("7546");
-		testerList.add("=-][P;'K,.JHG");
-		testerList.add("-=[OIUKL;'P[P';/");
-		testerList.add("STRYDTUFIGOHPU'/HL.G,JFM");
-		testerList.add("drytuitoup0u9-i[op';lk");
+		testerList.add("no caps");
+		testerList.add("LOTS OF CAPS");
+		testerList.add("hello");
+		testerList.add("Hello");
 		testerList.add(""
 				+ ";][l'pk;ljkgfjgh");
 		arrayListSort(testerList);
@@ -112,7 +99,7 @@ public class Controller
 			int maxIndex = outerLoop;
 			for (int inner = outerLoop + 1; inner < words.size(); inner++)
 			{
-				if (words.get(inner).compareToIgnoreCase(words.get(maxIndex)) > 0)
+				if (words.get(inner).compareTo(words.get(maxIndex)) > 0)
 				{
 					maxIndex = inner;
 				}
