@@ -23,7 +23,9 @@ public class Controller
 	
 	public void start()
 	{
-		sortingStrings();
+		sortStrings();
+		System.out.println("\n\n\n\n");
+		sortingStrings(); 
 //		System.out.print(nameList);
 ////		manyMonsters();
 //		moreListStuff();
@@ -85,12 +87,48 @@ public class Controller
 		testerList.add("Hello");
 		testerList.add(""
 				+ ";][l'pk;ljkgfjgh");
+		nameList.add("a");
+		nameList.add("b");
+
+		nameList.add("crrr");
+
+		nameList.add("d4r");
+
+		nameList.add("x");
+
+		nameList.add("4");
+
 		arrayListSort(testerList);
 		for( String word : testerList)
 		{
 			System.out.println(word);
 		}
 		
+	}
+	
+	private void sortStrings()
+	{
+		incertionSort(testerList);
+		
+		for (String word : testerList)
+		{
+			System.out.println(word);
+		}
+	}
+	private void incertionSort(ArrayList<String> words)
+	{
+		for ( int outer = 0; outer < words.size(); outer++)
+		{
+			String tested = words.get(outer);
+			
+			int inner = outer -1;
+			while ( inner >= 0 && tested.compareTo(words.get(inner)) < 0)
+			{
+				words.set(inner + 1,  words.get(inner));
+				inner --;
+			}
+			words.set(inner, tested);
+		}
 	}
 	private void arrayListSort(ArrayList <String> words)
 	{
