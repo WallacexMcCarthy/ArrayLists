@@ -55,5 +55,28 @@ public class DebugDuck
 		answeredQuestions++;
 	}
 	
+	@Override
+	public boolean equals(Object otherDuck)
+	{
+		boolean isMatch = false;
+		
+		if(this == otherDuck)
+		{
+			return true;
+		}
+		
+		if ( otherDuck instanceof DebugDuck)
+		{
+			DebugDuck other = (DebugDuck) otherDuck;
+			
+			if(other.getName().equalsIgnoreCase(name))
+			{
+				return true;
+			}
+		}
+		
+		return isMatch;
+	}
+	
 	
 }
