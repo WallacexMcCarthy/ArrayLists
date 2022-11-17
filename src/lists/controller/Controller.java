@@ -23,9 +23,11 @@ public class Controller
 	
 	public void start()
 	{
-		sortStrings();
-		System.out.println("\n\n\n\n");
 		sortingStrings(); 
+		System.out.println("\n\n\n\n");
+
+		sortStrings();
+		
 //		System.out.print(nameList);
 ////		manyMonsters();
 //		moreListStuff();
@@ -127,7 +129,7 @@ public class Controller
 				words.set(inner + 1,  words.get(inner));
 				inner --;
 			}
-			words.set(inner, tested);
+			words.set(inner + 1, tested);
 		}
 	}
 	private void arrayListSort(ArrayList <String> words)
